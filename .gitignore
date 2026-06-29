@@ -1,0 +1,12 @@
+playwright-report/
+test-results/
+html-report-*/
+junit-*/
+failure-*/
+artifacts-*/
+index.html
+node_modules/
+*.webm
+*.zip
+run-log.txt
+failure-log.txt
