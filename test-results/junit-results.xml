@@ -1,0 +1,30 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="7.998336">
+<testsuite name="secrets.spec.js" timestamp="2026-06-29T17:29:30.841Z" hostname="chromium" tests="3" failures="0" skipped="0" time="6.572" errors="0">
+<testcase name="Secrets and Environment Configuration › API_URL secret is configured and accessible" classname="secrets.spec.js" time="5.279">
+<system-out>
+<![CDATA[=== Secret Validation (Safe Logging) ===
+API_URL is not set - using baseURL from config
+AUTH_TOKEN is not set - running without auth
+=== End Secret Validation ===
+]]>
+</system-out>
+</testcase>
+<testcase name="Secrets and Environment Configuration › baseURL is correctly configured from environment" classname="secrets.spec.js" time="1.292">
+<system-out>
+<![CDATA[Running tests against: https://playwright.dev
+Page title: Playwright
+]]>
+</system-out>
+</testcase>
+<testcase name="Secrets and Environment Configuration › prints secret length not value - AUTH_TOKEN validation" classname="secrets.spec.js" time="0.001">
+<system-out>
+<![CDATA[--- Auth Token Validation ---
+Token present: false
+Token length: 0
+Token starts with expected prefix: true
+No token provided - skipping token validation
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
