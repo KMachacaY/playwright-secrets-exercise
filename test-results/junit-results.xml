@@ -1,22 +1,82 @@
-<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="14.304427">
-<testsuite name="report-demo.spec.js" timestamp="2026-06-29T17:40:32.408Z" hostname="chromium" tests="6" failures="0" skipped="0" time="13.071" errors="0">
-<testcase name="Documentation Site Tests › homepage loads correctly" classname="report-demo.spec.js" time="5.131">
+<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="1" time="85.88215699999999">
+<testsuite name="report-demo.spec.js" timestamp="2026-06-29T17:55:35.205Z" hostname="chromium" tests="6" failures="0" skipped="0" time="83.54" errors="1">
+<testcase name="Documentation Site Tests › homepage loads correctly" classname="report-demo.spec.js" time="16.527">
 </testcase>
-<testcase name="Documentation Site Tests › get started link navigates correctly" classname="report-demo.spec.js" time="1.35">
+<testcase name="Documentation Site Tests › get started link navigates correctly" classname="report-demo.spec.js" time="36.679">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|report-demo-Documentation--02e35-ed-link-navigates-correctly-chromium\video.webm]]
+
+[[ATTACHMENT|report-demo-Documentation--02e35-ed-link-navigates-correctly-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › report-demo.spec.js:11:3 › Documentation Site Tests › get started link navigates correctly 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://playwright.dev/", waiting until "load"
+
+
+      10 |
+      11 |   test('get started link navigates correctly', async ({ page }) => {
+    > 12 |     await page.goto('/');
+         |                ^
+      13 |     await page.getByRole('link', { name: 'Get started' }).click();
+      14 |     await expect(page).toHaveURL(/.*intro/);
+      15 |   });
+        at C:\Users\kenia.machaca\practices-ci-cd\playwright-secrets-exercise\tests\report-demo.spec.js:12:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\report-demo-Documentation--02e35-ed-link-navigates-correctly-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\report-demo-Documentation--02e35-ed-link-navigates-correctly-chromium\error-context.md
+]]>
+</error>
 </testcase>
-<testcase name="Documentation Site Tests › docs page has installation heading" classname="report-demo.spec.js" time="1.286">
+<testcase name="Documentation Site Tests › docs page has installation heading" classname="report-demo.spec.js" time="9.635">
 </testcase>
-<testcase name="Documentation Site Tests › page has navigation links" classname="report-demo.spec.js" time="2.31">
+<testcase name="Documentation Site Tests › page has navigation links" classname="report-demo.spec.js" time="2.813">
 <system-out>
 <![CDATA[Found 47 links on the page
 ]]>
 </system-out>
 </testcase>
-<testcase name="API Configuration Tests › base URL is accessible" classname="report-demo.spec.js" time="1.595">
+<testcase name="API Configuration Tests › base URL is accessible" classname="report-demo.spec.js" time="3.264">
 </testcase>
-<testcase name="API Configuration Tests › environment variables are readable" classname="report-demo.spec.js" time="1.399">
+<testcase name="API Configuration Tests › environment variables are readable" classname="report-demo.spec.js" time="14.622">
 <system-out>
 <![CDATA[Test running against: https://playwright.dev
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="secrets.spec.js" timestamp="2026-06-29T17:55:35.205Z" hostname="chromium" tests="3" failures="0" skipped="0" time="12.427" errors="0">
+<testcase name="Secrets and Environment Configuration › API_URL secret is configured and accessible" classname="secrets.spec.js" time="8.852">
+<system-out>
+<![CDATA[=== Secret Validation (Safe Logging) ===
+API_URL is not set - using baseURL from config
+AUTH_TOKEN is not set - running without auth
+=== End Secret Validation ===
+]]>
+</system-out>
+</testcase>
+<testcase name="Secrets and Environment Configuration › baseURL is correctly configured from environment" classname="secrets.spec.js" time="3.575">
+<system-out>
+<![CDATA[Running tests against: https://playwright.dev
+Page title: Fast and reliable end-to-end testing for modern web apps | Playwright
+]]>
+</system-out>
+</testcase>
+<testcase name="Secrets and Environment Configuration › prints secret length not value - AUTH_TOKEN validation" classname="secrets.spec.js" time="0">
+<system-out>
+<![CDATA[--- Auth Token Validation ---
+Token present: false
+Token length: 0
+No token provided - skipping token validation
 ]]>
 </system-out>
 </testcase>

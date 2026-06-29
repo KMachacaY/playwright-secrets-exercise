@@ -29,23 +29,17 @@ test.describe('Secrets and Environment Configuration', () => {
   test('baseURL is correctly configured from environment', async ({ page }) => {
     const configuredUrl = process.env.API_URL || 'https://playwright.dev';
     console.log(`Running tests against: ${configuredUrl}`);
-
     await page.goto('/');
-
     const title = await page.title();
     console.log(`Page title: ${title}`);
-
     expect(title.length).toBeGreaterThan(0);
   });
 
   test('prints secret length not value - AUTH_TOKEN validation', async () => {
     const token = process.env.AUTH_TOKEN || '';
-
     console.log('--- Auth Token Validation ---');
     console.log(`Token present: ${token.length > 0}`);
     console.log(`Token length: ${token.length}`);
-    console.log(`Token starts with expected prefix: ${token.startsWith('Bearer') || token.length === 0}`);
-
     if (token.length > 0) {
       expect(token.length).toBeGreaterThan(5);
     } else {
