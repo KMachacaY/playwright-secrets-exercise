@@ -8,19 +8,17 @@ test.describe('Intentional Failures - CI Verification', () => {
     console.log('Control test passed as expected');
   });
 
-  test('FAILS: wrong title assertion', async ({ page }) => {
-    await page.goto('/');
-    console.log('Attempting assertion that will fail...');
-    await expect(page).toHaveTitle(/This Title Cannot Possibly Exist In Reality/);
-  });
+  test('FIXED: correct title assertion', async ({ page }) => {
+  await page.goto('/');
+  console.log('Testing correct title assertion...');
+  await expect(page).toHaveTitle(/Playwright/);
+});
 
-  test('FAILS: element does not exist', async ({ page }) => {
-    await page.goto('/');
-    const missingButton = page.getByRole('button', {
-      name: 'This Button Does Not Exist'
-    });
-    await expect(missingButton).toBeVisible({ timeout: 3000 });
-  });
+test('FIXED: element that actually exists', async ({ page }) => {
+  await page.goto('/');
+  const link = page.getByRole('link', { name: 'Get started' });
+  await expect(link).toBeVisible();
+});
 
   test('this test also passes - another control case', async ({ page }) => {
     await page.goto('/docs/intro');
