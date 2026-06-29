@@ -1,28 +1,22 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="7.998336">
-<testsuite name="secrets.spec.js" timestamp="2026-06-29T17:29:30.841Z" hostname="chromium" tests="3" failures="0" skipped="0" time="6.572" errors="0">
-<testcase name="Secrets and Environment Configuration › API_URL secret is configured and accessible" classname="secrets.spec.js" time="5.279">
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="14.304427">
+<testsuite name="report-demo.spec.js" timestamp="2026-06-29T17:40:32.408Z" hostname="chromium" tests="6" failures="0" skipped="0" time="13.071" errors="0">
+<testcase name="Documentation Site Tests › homepage loads correctly" classname="report-demo.spec.js" time="5.131">
+</testcase>
+<testcase name="Documentation Site Tests › get started link navigates correctly" classname="report-demo.spec.js" time="1.35">
+</testcase>
+<testcase name="Documentation Site Tests › docs page has installation heading" classname="report-demo.spec.js" time="1.286">
+</testcase>
+<testcase name="Documentation Site Tests › page has navigation links" classname="report-demo.spec.js" time="2.31">
 <system-out>
-<![CDATA[=== Secret Validation (Safe Logging) ===
-API_URL is not set - using baseURL from config
-AUTH_TOKEN is not set - running without auth
-=== End Secret Validation ===
+<![CDATA[Found 47 links on the page
 ]]>
 </system-out>
 </testcase>
-<testcase name="Secrets and Environment Configuration › baseURL is correctly configured from environment" classname="secrets.spec.js" time="1.292">
-<system-out>
-<![CDATA[Running tests against: https://playwright.dev
-Page title: Playwright
-]]>
-</system-out>
+<testcase name="API Configuration Tests › base URL is accessible" classname="report-demo.spec.js" time="1.595">
 </testcase>
-<testcase name="Secrets and Environment Configuration › prints secret length not value - AUTH_TOKEN validation" classname="secrets.spec.js" time="0.001">
+<testcase name="API Configuration Tests › environment variables are readable" classname="report-demo.spec.js" time="1.399">
 <system-out>
-<![CDATA[--- Auth Token Validation ---
-Token present: false
-Token length: 0
-Token starts with expected prefix: true
-No token provided - skipping token validation
+<![CDATA[Test running against: https://playwright.dev
 ]]>
 </system-out>
 </testcase>
